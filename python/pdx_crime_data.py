@@ -31,12 +31,16 @@ files = [\
 
 opened_file = ""
 
+#Import csv files into dictionaries
+
 for i in range(0,5):
     print("Loading " + str(2011+i))
     opened_file = csv.DictReader(open(files[i], "r"))
     for r in opened_file:
         data[i][r["Record ID"]] = r
 print("Ready to go")
+
+#Tally crimes by year and as a total
 
 crime = ""
 crime_count_by_year = [{}, {}, {}, {}, {}]
@@ -55,6 +59,8 @@ for j in range(0,5):
         else:
             crime_count_total[crime] = 1
 
+#Analyize data, find biggest year, then most common crime, then least common crime
+
 yearly_totals = [0,0,0,0,0]
 
 for i in range(0,5):
@@ -65,8 +71,6 @@ for i in range(0,5):
 largest = max(yearly_totals)
 print (f"The most crime was in {2011 + yearly_totals.index(largest)}")
 
-
-
 print("Most common total: " + get_most_common(crime_count_total))
 for i in range(0,5):
         print("In " + str(2011+i) + ": " + get_most_common(crime_count_by_year[i]))
@@ -74,3 +78,21 @@ for i in range(0,5):
 print("Least common total: " + get_least_common(crime_count_total))
 for i in range(0,5):
         print("In " + str(2011+i) + ": " + get_least_common(crime_count_by_year[i]))
+
+
+
+import matplotlib.pyplot as plt
+
+i = 0
+chart_values = list(crime_count_total.values())
+chart_labels = list(crime_count_total.keys())
+while len(chart_values) > 5:
+    i = chart_values.index(min(chart_values))
+    chart_values.pop(i)
+    chart_labels.pop(i)
+print(chart_values)
+
+
+plt.pie(chart_values, labels=chart_labels, autopct='%1.1f%%')
+plt.title("5 Most common crimes within the time period")
+plt.show()

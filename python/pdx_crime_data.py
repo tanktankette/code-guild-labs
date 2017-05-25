@@ -31,7 +31,7 @@ files = [\
 
 opened_file = ""
 
-#Import csv files into dictionaries
+#Import csv files into data
 
 for i in range(0,5):
     print("Loading " + str(2011+i))
@@ -79,20 +79,22 @@ print("Least common total: " + get_least_common(crime_count_total))
 for i in range(0,5):
         print("In " + str(2011+i) + ": " + get_least_common(crime_count_by_year[i]))
 
-
+#Make a chart
 
 import matplotlib.pyplot as plt
 
 i = 0
+other = 0;
 chart_values = list(crime_count_total.values())
 chart_labels = list(crime_count_total.keys())
 while len(chart_values) > 5:
     i = chart_values.index(min(chart_values))
-    chart_values.pop(i)
+    other =+ chart_values.pop(i)
     chart_labels.pop(i)
-print(chart_values)
+chart_labels.append("Other")
+chart_values.append(other)
 
 
 plt.pie(chart_values, labels=chart_labels, autopct='%1.1f%%')
-plt.title("5 Most common crimes within the time period")
+plt.title("Most common crimes within the 5 year time period")
 plt.show()

@@ -27,7 +27,7 @@ print("Reading, please wait.")
 book = book.read()
 
 word_count = book.count("--")
-sentence_count = book.count(".")
+sentence_count = 0
 character_count = 0
 
 print(book.count(". "))

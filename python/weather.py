@@ -27,6 +27,6 @@ if(f == "F"):
 
 
 system("clear")
-
+print(j["name"])
 print("Condition: " + j["weather"][0]["description"].title())
 print(f"The temperature is {temp:.2f} degrees {f}")

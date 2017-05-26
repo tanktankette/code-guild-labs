@@ -54,7 +54,8 @@ for i in range(11):
 next_is_total = False
 largest = ""
 largest_value = 0
-target = "04-NOV-1998"
+target = input("Give me a date to search for (ex: 04-NOV-1998): ").upper()
+
 in_target = False
 result = ""
 

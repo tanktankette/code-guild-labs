@@ -24,17 +24,30 @@ file_name = input("Name of file: ")
 
 book = open(file_name,"r")
 print("Reading, please wait.")
-book = list(book.read())
+book = book.read()
 
-word_count = book.count(" ") + book.count("\n")
+word_count = book.count("--")
 sentence_count = book.count(".")
 character_count = 0
 
+print(book.count(". "))
 
 i = 0
 
-for c in string.ascii_lowercase + string.ascii_uppercase:
+for c in string.punctuation:
+    word_count += book.count(c + " ")
+    word_count += book.count(c + "\n")
+
+for c in string.ascii_lowercase:
     character_count += book.count(c)
+    word_count += book.count(c + " ")
+    word_count += book.count(c + "\n")
+    sentence_count += book.count(c + ".")
+
+for c in string.ascii_uppercase:
+    character_count += book.count(c)
+    word_count += book.count(c + " ")
+    word_count += book.count(c + "\n")
 
 print(character_count, word_count, sentence_count)
 

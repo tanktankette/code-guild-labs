@@ -52,9 +52,11 @@ next_is_total = False
 largest = ""
 largest_value = 0
 target = input("Give me a date to search for (ex: 04-NOV-1998): ").upper()
+if target == "":
+    target = "04-NOV-1998"
 
 in_target = False
-result = ""
+result = "   " + target + " "
 
 file = parse_file(file)
 
@@ -68,21 +70,23 @@ for i in file:
         elif len(s) > 5:
             next_is_total = s
             if in_target == True:
+                target = ""
                 in_target = False
+        if in_target == True:
+            result = f"{result}{s:^6}"
         if s == target:
             in_target = True
-        if in_target == True:
-            result = result + s + "\t"
+
 system("clear")
 print(f"The rainiest day was {largest} with {str(largest_value/100)} inches of rain")
 
-if result == "":
-    print("Nothing found for search")
-else:
+if target == "":
     print("""
        Each point is in hundredths of an inch of rain
-       
-       \t\tDaily\tHourly data -->
-       Date\tTotal\t0\t1\t2\t3\t4\t5\t6\t7\t8\t9\t10\t11\t12\t13\t14\t15\t16\t17\t18\t19\t20\t21\t22\t23
-    ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------""")
+
+               Daily   Hourly data -->
+       Date    Total   0     1     2     3     4     5     6     7     8     9     10    11    12    13    14    15    16    17    18    19    20    21    22    23
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------""")
     print(result)
+else:
+    print("Nothing found for search")

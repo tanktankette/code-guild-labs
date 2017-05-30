@@ -6,7 +6,7 @@ def take_command():
     while command == -1:
         try:
             command = int(input("""
-********Commands********
+*******Commands*******
 1: List Accounts
 2: Open Account
 3: Check Account
@@ -15,7 +15,7 @@ def take_command():
 6: Calculate Interest
 
 0: Exit
-************************
+**********************
 Input: """))
         except ValueError:
             system("clear")

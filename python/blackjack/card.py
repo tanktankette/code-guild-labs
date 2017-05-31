@@ -149,10 +149,10 @@ class Game:
     def dealers_turn(self):
         while int(self.dealers_hand) < 17:
             self.dealers_hand.draw(self.deck)
-            print("The dealer draws")
+            print("The dealer will hit")
             input("Press enter to continue:")
             self.print_game()
-        print("The dealer stays")
+        print("The dealer will stay")
         input("Press enter to continue:")
         self.finish_dealers_turn()
 

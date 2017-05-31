@@ -11,13 +11,14 @@ f = input("C/F: ").upper()
 
 
 try:
-    c=int(c)
+    c = int(c)
     t = "zip"
-except:
-    t="q"
+except ValueError:
+    t = "q"
 
 package[t] = c
-r = requests.post("http://api.openweathermap.org/data/2.5/weather", params=package)
+r = requests.post("http://api.openweathermap.org/data/2.5/weather",
+                  params=package)
 j = r.json()
 
 temp = j["main"]["temp"] - 272.15

@@ -3,11 +3,13 @@ def snake_check(word):
         return True
     return False
 
+
 def camel_check(word):
     for w in word:
         if w.isupper():
             return True
     return False
+
 
 word = input("Enter a word: ")
 if snake_check(word) and not camel_check(word):

@@ -27,7 +27,7 @@ elif i < e:
         print("And there isn't a c beforehand, it fits the rule!")
 else:
     print("Hmm, e is before i")
-    if c != 0 and c<i:
+    if c != 0 and c < i:
         print("But there is a c before that, so it fits the rule!")
     else:
         print("There doesn't seem to be a c before that either, exception!")

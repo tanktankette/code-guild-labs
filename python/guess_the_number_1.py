@@ -9,9 +9,9 @@ while play:
     upper_limit = int(input("""First off, what range of numbers do you want me to
     pick a number from, from 1 to...: """))
 
-    number = randrange(1,upper_limit)
+    number = randrange(1, upper_limit)
 
-    guess_number, guess_current = 0,-1
+    guess_number, guess_current = 0, -1
 
     while guess_current != number:
         guess_number += 1

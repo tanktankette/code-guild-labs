@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <title>Flexbox!</title>
+</head>
+<style>
+    section {
+        border: solid 2px;
+        margin: 3px;
+        display: flex;
+    }
+
+    div {
+        width: 100px;
+        height: 100px;
+        border: dashed 2px;
+        margin: 10px;
+    }
+
+    section section {
+        flex-grow: 1;
+        border: dashed 2px;
+    }
+
+    .firstsection {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+    .secondsection {
+      justify-content: flex-end;
+    }
+
+    .thirdsection :nth-child(2) {
+      flex-grow: 2;
+    }
+
+    .fourthsection {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .fifthsection {
+      flex-wrap: wrap;
+    }
+
+    .fifthsection :first-child {
+      order: 2;
+    }
+
+    .sixthsection :first-child {
+      flex-direction: column;
+    }
+
+    .sixthsection :nth-child(2) * {
+      flex-grow: 1;
+    }
+
+    .sixthsection :nth-child(3) {
+      align-items: center;
+    }
+
+    .seventhsection {
+      flex-wrap: wrap-reverse;
+      justify-content: center;
+    }
+
+
+</style>
+
+<body>
+    <h1>Flexbox</h1>
+    1
+    <section class="firstsection">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </section>
+    2
+    <section class="secondsection">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </section>
+    3
+    <section class="thirdsection">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </section>
+    4
+    <section class="fourthsection">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </section>
+    5
+    <section class="fifthsection">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+    </section>
+    6
+    <section class="sixthsection">
+        <section>
+            <div>1</div>
+            <div>2</div>
+        </section>
+        <section>
+            <div>3</div>
+            <div>4</div>
+        </section>
+        <section>
+            <div>5</div>
+            <div>6</div>
+        </section>
+    </section>
+    7
+    <section class="seventhsection">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+    </section>
+</body>
+</html>

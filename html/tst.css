@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:600');
+
+* {
+	padding: 0;
+	margin: 0;
+	font-family: 'Muli', sans-serif;
+}
+
+section.intro {
+	padding: 10px;
+	padding-bottom: 20px;
+	margin: 0;
+	background-color: #ee6600;
+	color: white;
+	text-align: center;
+	background-image: url()
+}
+
+#zen-supporting{
+	background-image: url(http://cdn.home-designing.com/wp-content/uploads/2013/11/33-Zen-garden.jpg);
+	background-attachment: fixed;
+	padding: 10px;
+}
+
+#zen-supporting div{
+	background-image: url(http://images.all-free-download.com/images/graphiclarge/autumn_dark_fall_fog_forest_landscape_leaves_light_598785.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	margin: 20px;
+	margin-top: 70px;
+	margin-bottom: 70px;
+	border: 1px;
+	border-style: solid;
+	border-radius: 10px;
+
+}
+
+#zen-supporting div p{
+	padding-top: 30px;
+	padding-bottom: 30px;
+	padding-left: 70px;
+	padding-right: 70px;
+	font-size: 1.5em;
+	color: white;
+}
+
+#zen-supporting div h3{
+	text-align: center;
+	color: white;
+	margin-top: 10px;
+}
+
+footer {
+	display: none;
+}
+
+aside{
+	background-image: url(http://cdn.home-designing.com/wp-content/uploads/2013/11/33-Zen-garden.jpg);
+	background-attachment: fixed;
+	padding: 20px;
+}
+
+.design-selection nav ul{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	text-align: center;
+	flex-wrap: wrap;
+	list-style-type: none;
+	background-color: #ee6600;
+}
+
+.design-archive nav ul{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	text-align: center;
+	list-style-type: none;
+	background-color: #ee6600;
+}
+
+.design-archives li a{
+	background-color: #112211;
+	padding: 20px;
+	border-radius: 3px;
+}
+
+.design-archives li a:hover{
+	background-color: #111111;
+}
+
+a {
+	text-decoration:none;
+	color:#5acaca;
+}
+
+.design-selection a {
+	font-size: 1.5em;
+}
+
+.wrapper {
+	color: white;
+	background-color: #ee6600;
+}
+
+.wrapper li {
+	display: flex;
+	color: white;
+/* 	background-color: #000033; */
+	flex-direction: column;
+	margin: 25px;
+	flex-basis: 20%;
+}
+
+h1 {
+	padding: 10px;
+	font-size: 3em;
+}
+
+h2 {
+	padding: 20px;
+	font-size: 2.5em;
+}
+
+h3 {
+	padding: 20px;
+	font-size: 2em;
+}

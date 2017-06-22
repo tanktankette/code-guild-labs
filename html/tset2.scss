@@ -1,0 +1,87 @@
+$size: 300px;
+
+@mixin set-position($position) {
+  position: relative;
+@if $position % 2 == 0 {
+  transform: translate((.5 * $size), -(.5 * $size) * ($position - 1) - $position);
+}
+@else {
+  transform: translateY(-(.5 * $size) * ($position - 1)- $position);
+}
+}
+
+* {
+  padding: 0;
+  margin: 0; }
+
+div.top {
+  width: auto;
+  height: 100%;
+  background: url(http://imgh.us/drawing_107.svg);
+  background-size: 100%;
+  background-repeat: no-repeat; }
+
+div.bottom {
+  position: relative;
+  bottom: 0px;
+  height: 0px;
+  width: 0px;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+  border-top: 150px solid black; }
+
+main {
+  position: relative;
+  display: flex;
+  width: 300px;
+  flex-direction: column;
+}
+
+main div.expand:nth-child(2) {
+  @include set-position(2);
+}
+
+main div.expand:nth-child(3) {
+  @include set-position(3);
+}
+
+main div.expand:nth-child(4) {
+  @include set-position(4);
+}
+
+main div.expand:nth-child(5) {
+  @include set-position(5);
+}
+
+div.expand {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  width: auto;
+/*   justify-content: space-between; */
+  transition: 2s; }
+
+div.expand:before {
+  content: "This is a ferret!";
+  position: absolute;
+  background: #FE5F55;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: alpha(opacity=0);
+  -moz-opacity: 0;
+  -khtml-opacity: 0;
+  opacity: 0;
+  transition: 2s; }
+
+div.expand:hover {
+  height: 400px;
+  content: "asdf"; }
+
+div.expand:hover:before {
+  transform: translate(-50%, -50%);
+  filter: alpha(opacity=100);
+  -moz-opacity: 1;
+  -khtml-opacity: 1;
+  opacity: 1; }

@@ -1,0 +1,93 @@
+@keyframes scrollingBackground {
+  0% {
+    background-position: 0%; }
+  50% {
+    background-position: 100%; }
+  100% {
+    background-position: 0%; } }
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(90deg, #2196f3, #9c27b0);
+  background-size: 400%;
+  text-align: center;
+  animation: scrollingBackground 10s infinite;
+  height: 90vh;
+  color: white; }
+
+.project-list {
+  background: lightgray;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  margin-left: 75px;
+  margin-right: 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .project-list div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .project-list div ul {
+      display: flex;
+      align-items: center;
+      padding: 0;
+      justify-content: space-around;
+      width: 100%; }
+      .project-list div ul li {
+        list-style: none;
+        border: solid; }
+
+ul li:nth-child(1) {
+  background: url("https://visualhunt.com/photos/xl/7/flower-bouquet-bunch-daisys.jpg");
+  background-size: cover;
+  width: 10em;
+  height: 7em; }
+
+ul li:nth-child(2) {
+  background: url("https://visualhunt.com/photos/l/7/sky-silhouette-star.jpg");
+  background-size: cover;
+  width: 10em;
+  height: 7em; }
+
+ul li:nth-child(3) {
+  background: url("https://visualhunt.com/photos/l/7/animal-kitten-pet.jpg");
+  background-size: cover;
+  width: 10em;
+  height: 7em; }
+
+article, .articles div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: lightgray;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  margin-left: 75px;
+  margin-right: 75px; }
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(90deg, #2196f3, #9c27b0);
+  background-size: 400%;
+  text-align: center;
+  animation: scrollingBackground 10s infinite;
+  color: white;
+  margin: 0;
+  padding: 10px; }
+
+body {
+  padding: 0;
+  margin: 0; }
+
+/*# sourceMappingURL=sasslab.css.map */

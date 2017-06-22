@@ -1,0 +1,92 @@
+$photos: 			    	  'https://visualhunt.com/photos/xl/7/flower-bouquet-bunch-daisys.jpg',
+	'https://visualhunt.com/photos/l/7/sky-silhouette-star.jpg',
+	'https://visualhunt.com/photos/l/7/animal-kitten-pet.jpg';
+
+@keyframes scrollingBackground {
+  0%{background-position:0%}
+  50%{background-position:100%}
+  100%{background-position:0%}
+}
+
+@mixin gradientBackground() {
+  background: linear-gradient(90deg, #2196f3, #9c27b0);
+  background-size: 400%;
+}
+
+@mixin grayBackground () {
+  background: lightgray;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  margin-left: 75px;
+  margin-right: 75px;
+}
+
+@mixin center () {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header {
+  @include center();
+  @include gradientBackground();
+  text-align: center;
+  animation: scrollingBackground 10s infinite;
+  height: 90vh;
+  color: white;
+}
+.project-list{
+  @include grayBackground();
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+  div{
+    width: 100%;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    ul {
+      display:flex;
+      align-items: center;
+      padding:0;
+      justify-content: space-around;
+      width: 100%;
+      li {
+        list-style: none;
+        border: solid;
+      }
+    }
+  }
+}
+@for $i from 1 through length($photos) {
+  ul li:nth-child(#{$i}){
+    background: url(nth($photos,$i));
+    background-size: cover;
+    width: 10em;
+    height: 7em;
+  }
+}
+
+article, .articles div{
+  @include center();
+  @include grayBackground();
+}
+
+footer {
+  @include center();
+  @include gradientBackground();
+  text-align: center;
+  animation: scrollingBackground 10s infinite;
+  color: white;
+  margin:0;
+  padding: 10px;
+}
+
+body{
+  padding: 0;
+  margin: 0;
+}

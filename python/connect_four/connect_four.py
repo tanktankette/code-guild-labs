@@ -25,11 +25,9 @@ class Board:
 
     def get_diagnal(self, row, orientation=0):
         column = 0
-        s = 1
         if row >= self.height:
             column = row - self.height + 1
             row = self.height - 1
-            s = -1
         r = min(self.height, self.width, row - column)
         for i in range(r + 1):
             x = row - i

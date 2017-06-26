@@ -27,8 +27,6 @@ function hold(i){
     }
 }
 
-alert("Let's play a game, try to roll a 1 and a 2 in either order")
-
 function update() {
     document.getElementById("die1").style.backgroundImage = "url(" + pictures[dice[0].value - 1] + ")";
     document.getElementById("die2").style.backgroundImage = "url(" + pictures[dice[1].value - 1] + ")";
@@ -39,7 +37,7 @@ function update() {
         alert("Stage 1 complete, now go for 3 and 4");
     } else if(stage === 1 && ((dice[0].value === 3 && dice[1].value === 4) || (dice[0].value === 4 && dice[1].value === 3))){
         alert("Stage 2 complete, now go for 5 and 6");
-        stage = 2
+        stage = 2;
     } else if(stage === 2 && dice[0].value + dice[1].value === 11){
         alert("You win! Resetting to first stage");
         stage = 0;
@@ -49,12 +47,7 @@ function update() {
     }
 }
 
-var stage = 0;
-var pictures = ["dice1.png","dice2.png","dice3.png","dice4.png","dice5.png","dice6.png",""];
-var holdbuttons = [document.getElementById("holdfirst"), document.getElementById("holdsecond")]
-
-function Die() // Constructor
-{
+function Die() {
     this.value = 7;
     this.held = false;
 
@@ -62,6 +55,12 @@ function Die() // Constructor
         this.value = Math.floor(Math.random() * 6) + 1;
     };
 }
+
+var stage = 0;
+var pictures = ["dice1.png","dice2.png","dice3.png","dice4.png","dice5.png","dice6.png",""];
+var holdbuttons = [document.getElementById("holdfirst"), document.getElementById("holdsecond")]
+
+alert("Let's play a game, try to roll a 1 and a 2 in either order");
 
 dice = [new Die(), new Die()];
 

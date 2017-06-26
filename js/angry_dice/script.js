@@ -60,7 +60,7 @@ var stage = 0;
 var pictures = ["dice1.png","dice2.png","dice3.png","dice4.png","dice5.png","dice6.png",""];
 var holdbuttons = [document.getElementById("holdfirst"), document.getElementById("holdsecond")]
 
-alert("Let's play a game, try to roll a 1 and a 2 in either order");
+alert("Let's play a game, try to roll a 1 and a 2 in either order\nThe jumping ferret is a three, if you roll two threes the game is reset");
 
 dice = [new Die(), new Die()];
 

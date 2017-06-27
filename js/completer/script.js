@@ -23,6 +23,7 @@ function Completer() {
       if(this.list[word] > this.highest){
           this.highest = this.list[word];
       }
+      this.sort();
     };
 
     this.collectWeight = function(w){

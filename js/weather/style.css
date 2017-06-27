@@ -1,0 +1,13 @@
+#input{
+    display: flex;
+}
+
+#weather{
+    background:lightgray;
+    opacity: .5;
+}
+
+#weatherwrapper{
+    padding: 50px;
+    background-size: cover;
+}

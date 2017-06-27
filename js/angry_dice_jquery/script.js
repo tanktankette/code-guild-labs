@@ -11,7 +11,7 @@ holdbuttons[1].click(function(e){
 
 
 
-document.getElementById("roll").addEventListener("click", function(e){
+$("#roll").click( function(e){
     e.preventDefault();
     if (dice[0].held === false){dice[0].roll()}
     if (dice[1].held === false){dice[1].roll()}

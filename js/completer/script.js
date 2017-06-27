@@ -27,27 +27,30 @@ function Completer() {
 
     this.collectWeight = function(w){
         var results = [];
-        Object.keys(this.list).forEach(function(item) {
-        if (this.list[item] === w){
-            results.push(item);
-        }});
+        for(var key in this.list){
+            if (this.list[key] === w){
+                results.push(key);
+            }
+        }
         return results;
     };
 
     this.sort = function(){
-        var i = 0;
+        var i = this.highest;
         var newSort = [];
-        while (i <= this.highest) {
+        while (i >= 0) {
             var temp = this.collectWeight(i);
             if (temp !== []) {
-                newSort.push(temp.sort());
+                temp.sort();
+                newSort = newSort.concat(temp);
             }
-            i++;
+            i--;
         }
         var newList = {};
-        newSort.forEach(function(item){
-            newList[item] = this.list[item];
-        });
+        for(var key in newSort){
+            key = newSort[key];
+            newList[key] = this.list[key];
+        }
         this.list = newList;
     };
 }
@@ -56,4 +59,5 @@ var t = new Completer();
 t.add("baa");
 t.add("banana");
 t.add("apple");
+t.select("banana");
 t.sort();

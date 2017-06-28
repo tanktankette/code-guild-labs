@@ -10,6 +10,11 @@ back = {"Clear": "url(clear.jpeg)",
         "Snow" : "url(snow.jpeg)",
         "Rain" : "url(rain.jpeg)"};
 
+icons = {"Clear": "http://openweathermap.org/img/w/01d.png",
+        "Clouds": "http://openweathermap.org/img/w/03d.png",
+        "Snow": "http://openweathermap.org/img/w/13d.png",
+        "Rain": "http://openweathermap.org/img/w/10d.png"};
+
 $("#button").click(function(e){
     e.preventDefault();
 
@@ -28,10 +33,12 @@ $("#button").click(function(e){
         success: function(data){
             tempc = data.main.temp - 272.15;
             tempf = tempc * 9 / 5 + 32;
+            var w = data.weather[0].main;
+            var ico = $("<img src =" + icons[w] + ">");
             $("#temp").text("Temp (C/F): " + tempc.toFixed(1) + "°/" + tempf.toFixed(0) + "°");
             $("#city").text("City: " + data.name);
-            $("#condition").text("Condition: " + data.weather[0].description.capitalize());
-            var w = data.weather[0].main;
+            $("#condition").html("Condition: " + data.weather[0].description.capitalize() + ico[0].outerHTML);
+            console.log(ico[0].outerHTML);
             $("#weatherwrapper").css("background", back[w]);
         }
     })

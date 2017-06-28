@@ -20,32 +20,26 @@ $.ajax({
         success: function(data){
             for (i in data.features){
                 if (data.features[i].properties.mag > 0) {
-                    var opac = (data.features.length - i) / data.features.length;
-                    var size = data.features[i].properties.mag * 10;
+                    var opac = (data.features.length - i) * .9 / data.features.length;
+                    var size = data.features[i].properties.mag * 20000;
                     var lon = data.features[i].geometry.coordinates[0];
                     var lat = data.features[i].geometry.coordinates[1];
-                    var color = "#000000";
-                    console.log(color);
-                    var feature = new ol.Feature({
-                        geometry: new ol.geom.Point(ol.proj.fromLonLat([lon, lat]), "XY"),
-                        style: new ol.style.Circle({
-                            radius: size,
-                            // fill: new ol.style.Fill([0,9,9,1])
-                        })
-                    });
+                    var feature = new ol.Feature(new ol.geom.Circle(ol.proj.fromLonLat([lon, lat]), size, "XY"))
+
+                    feature.setStyle(new ol.style.Style({
+                            fill: new ol.style.Fill({color: [200,200,255, opac]}),
+                            stroke: new ol.style.Stroke({color: [50,50,100, opac],
+                                                         width: 2})
+                        }));
                     col.push(feature);
                 }
             }
         }
     });
-console.log(col);
  var vecSource = new ol.source.Vector({
      features: col
  });
-console.log("help");
  var vecLayer = new ol.layer.Vector({
      source: vecSource
  });
-console.log("help");
 map.addLayer(vecLayer);
-console.log("help");

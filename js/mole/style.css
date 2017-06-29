@@ -1,0 +1,75 @@
+section{
+    width: 412px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    border-width: 10px;
+    border-color: black;
+
+}
+
+.top{
+    z-index: 1;
+    position:absolute;
+    left:0;
+    top:0;
+    width:103px;
+    height:84px;
+}
+
+.mole{
+    position:absolute;
+    z-index: 0;
+    width: 66px;
+    left: 20px;
+    top: 38px;
+    transition: 2s;
+}
+
+.out{
+    transition: 3s;
+    top: 0;
+}
+
+section div{
+    background-image: url("hole.png");
+    background-size: cover;
+    position:relative;
+    width:103px;
+    height:84px;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-content:center;
+    height: 95vh;
+}
+
+article{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+    padding: 50px;
+    margin:100px;
+    background: #A6C871;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+img{
+    width:125px;
+}
+
+div{
+    margin-bottom: 30px;
+    background-color: chartreuse;
+}
+
+button{
+    margin-top: 30px;
+}

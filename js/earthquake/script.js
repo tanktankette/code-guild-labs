@@ -42,7 +42,7 @@ function read(){
         }
     });
 }
-
+read();
 setInterval(read, 300000);
  var vecSource = new ol.source.Vector({
      features: col

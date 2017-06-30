@@ -1,12 +1,23 @@
-section{
+#molewrapper{
     width: 412px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    border-width: 10px;
-    border-color: black;
+}
 
+#feedback{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #b6d8a1;
+    padding: 10px;
+    margin-bottom: 80px;
+    border: 2px black solid;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    width: 300px;
 }
 
 .top{
@@ -53,8 +64,9 @@ article{
     flex-direction: column;
     align-items: center;
     width: 600px;
-    padding: 50px;
+    padding: 20px;
     margin:100px;
+    border: 5px black solid;
     background: #A6C871;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -63,11 +75,6 @@ article{
 
 img{
     width:125px;
-}
-
-div{
-    margin-bottom: 30px;
-    background-color: chartreuse;
 }
 
 button{

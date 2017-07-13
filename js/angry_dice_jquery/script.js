@@ -1,4 +1,4 @@
-var holdbuttons = [$("#holdfirst"), $("#holdsecond")];
+const holdbuttons = [$("#holdfirst"), $("#holdsecond")];
 
 holdbuttons[0].click(function(e) {
     e.preventDefault();
@@ -47,7 +47,7 @@ function update() {
         alert("You win! Resetting to first stage");
         stage = 0;
     } else if(dice[0].value === 3 && dice[1].value === 3){
-        alert("Angry dice!!! Back to first stage, get a 1 and a 2")
+        alert("Angry dice!!! Back to first stage, get a 1 and a 2");
         stage = 0;
     }
 }
@@ -61,8 +61,8 @@ function Die() {
     };
 }
 
-var stage = 0;
-var pictures = ["url(dice1.png)","url(dice2.png)","url(dice3.png)","url(dice4.png)","url(dice5.png)","url(dice6.png)","gray"];
+let stage = 0;
+let pictures = ["url(dice1.png)","url(dice2.png)","url(dice3.png)","url(dice4.png)","url(dice5.png)","url(dice6.png)","gray"];
 
 
 alert("Let's play a game, try to roll a 1 and a 2 in either order\nThe jumping ferret is a three, if you roll two threes the game is reset");

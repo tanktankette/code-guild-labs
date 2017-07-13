@@ -42,7 +42,7 @@ function update() {
         alert("You win! Resetting to first stage");
         stage = 0;
     } else if(dice[0].value === 3 && dice[1].value === 3){
-        alert("Angry dice!!! Back to first stage, get a 1 and a 2")
+        alert("Angry dice!!! Back to first stage, get a 1 and a 2");
         stage = 0;
     }
 }
@@ -56,9 +56,9 @@ function Die() {
     };
 }
 
-var stage = 0;
-var pictures = ["dice1.png","dice2.png","dice3.png","dice4.png","dice5.png","dice6.png",""];
-var holdbuttons = [document.getElementById("holdfirst"), document.getElementById("holdsecond")]
+let stage = 0;
+let pictures = ["dice1.png","dice2.png","dice3.png","dice4.png","dice5.png","dice6.png",""];
+let holdbuttons = [document.getElementById("holdfirst"), document.getElementById("holdsecond")];
 
 alert("Let's play a game, try to roll a 1 and a 2 in either order\nThe jumping ferret is a three, if you roll two threes the game is reset");
 

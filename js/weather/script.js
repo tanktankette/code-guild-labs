@@ -18,8 +18,8 @@ icons = {"Clear": "http://openweathermap.org/img/w/01d.png",
 $("#button").click(function(e){
     e.preventDefault();
 
-    var pkg = {APPID: "9c862df5681526994f6c14a975122599"};
-    var location = $("#location").val();
+    const pkg = {APPID: "9c862df5681526994f6c14a975122599"};
+    const location = $("#location").val();
     if(isNaN(location)){
         pkg.q = location;
     } else {
@@ -33,8 +33,8 @@ $("#button").click(function(e){
         success: function(data){
             tempc = data.main.temp - 272.15;
             tempf = tempc * 9 / 5 + 32;
-            var w = data.weather[0].main;
-            var ico = $("<img src =" + icons[w] + ">");
+            const w = data.weather[0].main;
+            const ico = $("<img src =" + icons[w] + ">");
             $("#temp").text("Temp (C/F): " + tempc.toFixed(1) + "°/" + tempf.toFixed(0) + "°");
             $("#city").text("City: " + data.name);
             $("#condition").html("Condition: " + data.weather[0].description.capitalize() + ico[0].outerHTML);

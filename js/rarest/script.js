@@ -1,7 +1,7 @@
 /**
  * Created by tanktankette on 6/26/17.
  */
-var namesToAges = {
+const namesToAges = {
     'Alyssa': 22,
     'Charley': 25,
     'Dan': 25,
@@ -14,7 +14,7 @@ var namesToAges = {
 };
 
 function findRarestValue(obj){
-    var freq = new Object();
+    const freq = new Object();
     Object.values(obj).forEach(function(item) {
         if (freq[item] !== undefined) {
             freq[item] = freq[item] + 1;
@@ -23,7 +23,7 @@ function findRarestValue(obj){
         }
     });
 
-    var least = -1;
+    let least = -1;
     Object.keys(freq).forEach(function(item) {
         if(freq[item] < freq[least] || least === -1){
             least = item
@@ -33,7 +33,7 @@ function findRarestValue(obj){
 }
 
 function getKeysByValue(v, obj) {
-    var results = [];
+    const results = [];
     Object.keys(obj).forEach(function(item) {
         if (obj[item].toString() === v.toString()){
             results.push(item);

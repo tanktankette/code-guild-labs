@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>What</title>
+</head>
+<body>
+<div class="container">
+    <article class="head">
+    {% if user.is_authenticated %}
+        <h1>Hi, {{ user.first_name }}, welcome!</h1>
+        <ul>
+            {% for n in names %}
+                <li>{{ n }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <h1>Hello, who are you?</h1>
+    {% endif %}
+    </article>
+</div>
+</body>
+
+</html>

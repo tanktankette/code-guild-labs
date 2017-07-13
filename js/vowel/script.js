@@ -1,10 +1,10 @@
 /**
  * Created by tanktankette on 6/23/17.
  */
-alert("It's time to play...")
-alert("IS IT A VOWEL?!?!?!")
+alert("It's time to play...");
+alert("IS IT A VOWEL?!?!?!");
 
-var c = prompt('Enter a character');
+let c = prompt('Enter a character');
 
 while(c !== ""){
     c.toLowerCase();
@@ -17,6 +17,6 @@ while(c !== ""){
     } else {
         alert("It's not a vowel!")
     }
-    var c = prompt('Enter a character');
+    c = prompt('Enter a character');
 }
 

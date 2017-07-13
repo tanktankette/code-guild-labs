@@ -3,9 +3,9 @@
  */
 function encrypt(str, key){
     str = str.toLowerCase();
-    var encode = "";
+    let encode = "";
     for(c in str){
-        var temp = str.charCodeAt(c);
+        let temp = str.charCodeAt(c);
         if(temp !== 32) {
             temp += key;
             if (temp > 122) {
@@ -23,7 +23,7 @@ function decrypt(str, key){
     return encrypt(str, -key);
 }
 
-var code = encrypt("Hello how have you been", 5);
+let code = encrypt("Hello how have you been", 5);
 console.log(code);
 code = decrypt(code, 5);
 console.log(code);

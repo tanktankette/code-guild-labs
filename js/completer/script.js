@@ -17,7 +17,6 @@ function Completer() {
         }
 
         if (results.length > 0) {
-            delete e1;
             return this.prune(results);
         }
 
@@ -27,8 +26,6 @@ function Completer() {
         }
 
         if (results.length > 0) {
-            delete e1;
-            delete e2;
             return this.prune(results);
         } else {return "Nothing found"}
 

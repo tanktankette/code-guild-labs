@@ -3,7 +3,7 @@ from os import system
 
 system("clear")
 
-package = {"APPID": "9c862df5681526994f6c14a975122599"}
+package = {"APPID": "9c862df5681526994f6c14a9751232599"}
 c = input("City name or Zip Code: ")
 t = ""
 

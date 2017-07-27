@@ -80,11 +80,11 @@ print(f"The most crime was in {2011 + yearly_totals.index(largest)}")
 
 print("Most common total: " + get_most_common(crime_count_total))
 for i in range(0, 5):
-        print(f"In {str(2011+i)}: {get_most_common(crime_count_by_year[i]))}")
+        print(f"In {str(2011+i)}: {get_most_common(crime_count_by_year[i])}")
 
 print("Least common total: " + get_least_common(crime_count_total))
 for i in range(0, 5):
-        print(f"In {str(2011+i)}: {get_least_common(crime_count_by_year[i]))}")
+        print(f"In {str(2011+i)}: {get_least_common(crime_count_by_year[i])}")
 
 # Make a chart
 

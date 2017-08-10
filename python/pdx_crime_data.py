@@ -86,7 +86,7 @@ print("Least common total: " + get_least_common(crime_count_total))
 for i in range(0, 5):
         print(f"In {str(2011+i)}: {get_least_common(crime_count_by_year[i])}")
 
-# Make a chart
+# Make a chart  
 
 
 i = 0
